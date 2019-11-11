@@ -1,0 +1,43 @@
+<body style="color: #E6E6FA;">
+  
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cálculo de peso ideal feminino
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>Informe seus dados:</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Altura:</ion-label>
+          <br>
+          <ion-input type="number" [(ngModel)]="altura" style="color: #C0C0C0;">Altura em CM: </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" (click)="calcularF()">Calcular</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Peso ideal (em kg):</ion-label>
+            <ion-input type="number" [value]="exibeResultado()" disabled="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
+</body>

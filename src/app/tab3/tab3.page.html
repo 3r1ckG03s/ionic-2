@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cálculo do IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>Informe seus dados:</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Peso:</ion-label>
+          <br>
+          <ion-input type="number" [(ngModel)]="peso" style="color: #C0C0C0;">Peso em KG: </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Altura :</ion-label>
+          <br>
+          <ion-input type="number" [(ngModel)]="altura" style="color: #C0C0C0;">Altura em metros: </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="calcularIMC()">
+          <ion-icon name="finger-print"></ion-icon>
+          <ion-label>Calcular</ion-label>
+        </ion-button>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" >IMC:</ion-label>
+          <br>
+          <ion-input type="number" [value]="exibeIMC()" disabled="true" ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
